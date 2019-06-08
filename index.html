@@ -105,6 +105,20 @@ slider.oninput = function() {
 document.getElementById("tomdog").style.backgroundSize = "contain";
     document.getElementById("tomdog").style.backgroundPosition = "center";
 } 
+      
+    myAudio = new Audio('song.mp3'); 
+if (typeof myAudio.loop == 'boolean')
+{
+    myAudio.loop = true;
+}
+else
+{
+    myAudio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+myAudio.play();
       </script>
     
 </html>
