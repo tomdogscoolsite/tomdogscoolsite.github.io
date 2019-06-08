@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--                "Club Diver" Kevin MacLeod (incompetech.com)                -->
+<!--        Licensed under Creative Commons: By Attribution 3.0 License         -->
+<!--                http://creativecommons.org/licenses/by/3.0/                 -->
 <html>
   <head>
     <meta charset="UTF-8">
@@ -23,7 +26,7 @@
             margin right:10%;
             height: 20%;
             width: 80%;
-            background: url("cool3.PNG");
+            background: url("cool3.png");
             background-repeat:no-repeat;
             background-size:contain;
             background-position:center;
@@ -98,15 +101,7 @@
   </body>
     
     <script>
-      var slider = document.getElementById("myRange");
-slider.oninput = function() {
-  document.getElementById("tomdog").style.background = 'url("' + slider.value + '.JPG")';
- document.getElementById("tomdog").style.backgroundRepeat = "no-repeat";
-document.getElementById("tomdog").style.backgroundSize = "contain";
-    document.getElementById("tomdog").style.backgroundPosition = "center";
-} 
-      
-    myAudio = new Audio('song.mp3'); 
+          myAudio = new Audio('https://tomdogscoolsite.github.io/song.mp3'); 
 if (typeof myAudio.loop == 'boolean')
 {
     myAudio.loop = true;
@@ -119,6 +114,17 @@ else
     }, false);
 }
 myAudio.play();
+      
+      
+      var slider = document.getElementById("myRange");
+slider.oninput = function() {
+  document.getElementById("tomdog").style.background = 'url("' + slider.value + '.jpg")';
+ document.getElementById("tomdog").style.backgroundRepeat = "no-repeat";
+document.getElementById("tomdog").style.backgroundSize = "contain";
+    document.getElementById("tomdog").style.backgroundPosition = "center";
+} 
+      
+
       </script>
     
 </html>
