@@ -101,6 +101,8 @@
   </body>
     
     <script>
+      
+      function song(){
           myAudio = new Audio('https://tomdogscoolsite.github.io/song.mp3'); 
 if (typeof myAudio.loop == 'boolean')
 {
@@ -113,11 +115,16 @@ else
         this.play();
     }, false);
 }
-myAudio.play();
+myAudio.play(); }
       
       
       var slider = document.getElementById("myRange");
+      var did = false;
 slider.oninput = function() {
+  if(!did){
+    did = true;
+    song();
+  }
   document.getElementById("tomdog").style.background = 'url("' + slider.value + '.jpg")';
  document.getElementById("tomdog").style.backgroundRepeat = "no-repeat";
 document.getElementById("tomdog").style.backgroundSize = "contain";
